@@ -1,113 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tr1pL39 | Apply</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TR1PL39 Application</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="form-wrapper">
-        <div class="warning-banner">
-            <div class="warning-icon">
-                <img src="https://i.imgur.com/8yN3W2Z.png" alt="Warning" width="50"> 
-            </div>
-            <div class="header-text">
-                <h1>TR1PL39 APPLICATION FORM</h1>
-                <p>San Andreas Police Department Recruitment (Modified for Tr1pL39)</p>
-            </div>
-        </div>
+<div class="container">
 
-        <form id="recruitmentForm">
-            <div class="section-container">
-                <div class="section-header">
-                    <span>Personal Information</span>
-                    <span class="count">0/1000</span>
-                </div>
-                
-                <div class="grid-inputs">
-                    <div class="input-field">
-                        <label>Full Name</label>
-                        <input type="text" id="fullName" placeholder="Full Name" required>
-                        <span class="sub-count">0/1000</span>
-                    </div>
-                    <div class="input-field">
-                        <label>ID Nick</label>
-                        <input type="text" id="idNick" placeholder="ID Nick" required>
-                        <span class="sub-count">0/1000</span>
-                    </div>
-                    <div class="input-field">
-                        <label>Account Name</label>
-                        <input type="text" id="accName" placeholder="Account Name">
-                        <span class="sub-count">0/1000</span>
-                    </div>
-                    <div class="input-field">
-                        <label>Serial Number</label>
-                        <input type="text" id="serial" placeholder="Serial Number">
-                        <span class="sub-count">0/1000</span>
-                    </div>
-                    <div class="input-field">
-                        <label>Discord Username</label>
-                        <input type="text" id="discord" placeholder="Include your Discord name (without #1234)">
-                        <span class="sub-count">0/1000</span>
-                    </div>
-                    <div class="input-field">
-                        <label>Country Code</label>
-                        <input type="text" id="country" placeholder="2-letter code (e.g. US, CA, MA)">
-                        <span class="sub-count">0/2</span>
-                    </div>
-                </div>
-            </div>
+    <h2 style="text-align:center;">TR1PL39 Application Form</h2>
 
-            <div class="section-container">
-                <div class="section-header">
-                    <span>Game Information</span>
-                    <span class="count">0/1000</span>
-                </div>
-                <div class="grid-inputs">
-                    <div class="input-field">
-                        <label>Stats Link</label>
-                        <input type="url" id="stats" placeholder="Stats Link">
-                        <span class="sub-count">0/1000</span>
-                    </div>
-                    <div class="input-field">
-                        <label>Punishing Link</label>
-                        <input type="url" id="punish" placeholder="Punishing Link">
-                        <span class="sub-count">0/1000</span>
-                    </div>
-                </div>
-                <div class="input-field full-row">
-                    <label>Interview Ready?</label>
-                    <select id="ready">
-                        <option value="Select">Select</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-                </div>
-            </div>
+    <form id="applyForm">
 
-            <div class="section-container">
-                <div class="section-header">
-                    <span>Scenario Questions</span>
-                    <span class="count">0/1000</span>
-                </div>
-                <div class="input-field full-row">
-                    <label>Define Corruption</label>
-                    <textarea id="corruption" rows="4"></textarea>
-                    <span class="sub-count">0/1000</span>
-                </div>
-                <div class="input-field full-row">
-                    <label>What is a Backup?</label>
-                    <textarea id="backup" rows="4"></textarea>
-                    <span class="sub-count">0/1000</span>
-                </div>
-            </div>
+        <input type="text" name="name" placeholder="Your Name" required>
 
-            <button type="submit" class="submit-btn">SEND TO DISCORD</button>
-        </form>
-    </div>
+        <input type="text" name="age" placeholder="Age" required>
 
-    <script src="script.js"></script>
+        <input type="text" name="hours" placeholder="In-game Hours" required>
+
+        <input type="text" name="previous-gangs" placeholder="Previous Gangs">
+
+        <textarea name="why" placeholder="Why do you want to join TR1PL39?" required></textarea>
+
+        <textarea name="experience" placeholder="Your experience in CIT / RP"></textarea>
+
+        <button type="submit">Submit Application</button>
+
+    </form>
+
+    <a class="back" href="index.html">← Back</a>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
