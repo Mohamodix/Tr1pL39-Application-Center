@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply - TR1PL39</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #05080f;
+    color: white;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: #3b82f6;
+    margin-top: 30px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    background: #0b1220;
+    border: 1px solid #1e293b;
+    color: white;
+    border-radius: 6px;
+}
+
+button {
+    background: #3b82f6;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2563eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container fade">
+
+<h1>TR1PL39 Application</h1>
+
+<form action="https://formspree.io/f/YOUR_ID" method="POST">
+
+<h2>1. Introduction</h2>
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="number" name="age" placeholder="Age" required>
+<select name="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<h2>2. Informations</h2>
+<input type="text" name="account" placeholder="Account Name" required>
+<input type="text" name="serial" placeholder="Serial" required>
+
+<h2>3. Screenshots</h2>
+<input type="url" placeholder="Stats Screenshot">
+<input type="url" placeholder="History Screenshot">
+
+<h2>4. Agreements</h2>
+<select><option>Agree to rules?</option><option>Yes</option><option>No</option></select>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
