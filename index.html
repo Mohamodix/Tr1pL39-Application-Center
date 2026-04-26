@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TR1PL39 Recruitment</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+    border-bottom: 2px solid red;
+    background: linear-gradient(black, #111);
+}
+
+header img {
+    width: 140px;
+}
+
+h1 {
+    letter-spacing: 3px;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    background: #111;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.box {
+    background: #111;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid red;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    background: #0d0d0d;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: red;
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    background: red;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* TITLES */
+h2 {
+    color: red;
+}
+
+h3 {
+    border-left: 4px solid red;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://imgur.com/6aTriqF.png">
+    <h1>TR1PL39</h1>
+    <p>Elite Gang Recruitment</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#apply">Apply</a>
+</nav>
+
+<section id="about">
+    <div class="box">
+        <h2>About TR1PL39</h2>
+        <p>We recruit only loyal, active, and disciplined players. Follow rules or get removed.</p>
+    </div>
+</section>
+
+<section id="apply">
+    <div class="box">
+        <h2>Application Form</h2>
+
+        <!-- IMPORTANT: REPLACE LINK -->
+        <form action="https://formspree.io/f/YOUR_ID" method="POST">
+
+            <h3>1. Introduction</h3>
+            <input type="text" name="name" placeholder="What is your name?" required>
+            <input type="number" name="age" placeholder="How old are you?" required>
+
+            <select name="gender" required>
+                <option value="">Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <input type="text" name="hobbies" placeholder="Favorite hobbies" required>
+            <input type="text" name="former_groups" placeholder="Former groups" required>
+
+            <h3>2. Informations</h3>
+            <input type="text" name="account" placeholder="Account name" required>
+            <input type="text" name="serial" placeholder="Serial" required>
+            <input type="text" name="playtime" placeholder="Playtime (hours/day)" required>
+
+            <textarea name="reason" placeholder="Why do you wanna join?" required></textarea>
+
+            <h3>3. Screenshots</h3>
+            <input type="url" name="stats" placeholder="/stats screenshot link" required>
+            <input type="url" name="history" placeholder="/myhistory screenshot link" required>
+            <input type="url" name="punishlog" placeholder="/punishlog screenshot link" required>
+
+            <h3>4. Agreements</h3>
+
+            <select name="rules" required>
+                <option value="">Agree to follow CIT rules?</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <select name="leaders" required>
+                <option value="">Will you avoid annoying leaders?</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <select name="leave" required>
+                <option value="">Will you leave once accepted?</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <select name="punish" required>
+                <option value="">Will you avoid punishments?</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <button type="submit">Submit Application</button>
+
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TR1PL39</p>
+</footer>
+
+</body>
+</html>
