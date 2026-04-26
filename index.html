@@ -1,64 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TR1PL39 Recruitment</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tr1pL39 | Application Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="nav">
-    <div class="logo">TR1PL39</div>
-    <div class="links">
-        <a href="#req">Requirements</a>
-        <a href="#rules">Rules</a>
-        <a href="apply.html" class="btn-small">Apply</a>
-    </div>
-</header>
-
-<section class="hero">
-    <h1>TR1PL39 Recruitment</h1>
-    <p>Professional structured group — discipline, activity, teamwork.</p>
-    <a href="apply.html" class="btn">Start Application</a>
-</section>
-
-<section class="container">
-
-    <div class="grid">
-
-        <div class="card" id="req">
-            <h2>Requirements</h2>
-            <ul>
-                <li>Decent English communication skills</li>
-                <li>200+ in-game hours minimum</li>
-                <li>Must be groupless before applying</li>
-                <li>Must stay gangless 2–3 days</li>
-                <li>Active daily player</li>
-                <li>Basic CIT RP understanding</li>
-            </ul>
+<div class="application-container">
+    <div class="warning-header">
+        <div class="warning-icon">⚠️</div>
+        <div class="warning-text">
+            TR1PL39 APPLICATION FORM
+            <span>San Andreas Community Is Together</span>
         </div>
-
-        <div class="card" id="rules">
-            <h2>Rules</h2>
-            <ul>
-                <li>No known troublemakers (instant denial)</li>
-                <li>Wait 3–4 days before reapplying</li>
-                <li>No asking leaders about applications</li>
-                <li>Follow TR1PL39 rules at all times</li>
-                <li>Follow CIT server rules</li>
-                <li>Toxic behavior = blacklist</li>
-            </ul>
-        </div>
-
     </div>
 
-</section>
+    <form id="discordForm">
+        <div class="form-section">
+            <div class="section-title">Personal Information <span class="counter">0/1000</span></div>
+            <div class="input-grid">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" placeholder="Your Name" required>
+                    <span class="char-count">0/1000</span>
+                </div>
+                <div class="input-box">
+                    <label>ID Nick</label>
+                    <input type="text" id="idNick" placeholder="In-game Nick" required>
+                    <span class="char-count">0/1000</span>
+                </div>
+                <div class="input-box">
+                    <label>Account Name</label>
+                    <input type="text" id="accName" placeholder="Account Name">
+                    <span class="char-count">0/1000</span>
+                </div>
+                <div class="input-box">
+                    <label>Serial Number</label>
+                    <input type="text" id="serial" placeholder="Your MTA Serial">
+                    <span class="char-count">0/1000</span>
+                </div>
+                <div class="input-box">
+                    <label>Discord Username</label>
+                    <input type="text" id="discord" placeholder="username#0000">
+                    <span class="char-count">0/1000</span>
+                </div>
+                <div class="input-box">
+                    <label>Country Code</label>
+                    <input type="text" id="country" placeholder="e.g. MA, US, FR">
+                    <span class="char-count">0/2</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="form-section">
+            <div class="section-title">Game Information <span class="counter">0/1000</span></div>
+            <div class="input-grid">
+                <div class="input-box">
+                    <label>Stats Link</label>
+                    <input type="url" id="stats" placeholder="CIT Stats URL">
+                    <span class="char-count">0/1000</span>
+                </div>
+                <div class="input-box">
+                    <label>Punishing Link</label>
+                    <input type="url" id="punish" placeholder="CIT Punish URL">
+                    <span class="char-count">0/1000</span>
+                </div>
+            </div>
+            <div class="input-box full-width">
+                <label>Interview Ready?</label>
+                <select id="interview">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Scenario Questions <span class="counter">0/1000</span></div>
+            <div class="input-box full-width">
+                <label>Define Corruption</label>
+                <textarea id="corruption" placeholder="Explain..."></textarea>
+                <span class="char-count">0/1000</span>
+            </div>
+            <div class="input-box full-width">
+                <label>What is a Backup?</label>
+                <textarea id="backup" placeholder="Explain..."></textarea>
+                <span class="char-count">0/1000</span>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
