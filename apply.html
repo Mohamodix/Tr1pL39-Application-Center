@@ -10,29 +10,43 @@
 
 <body>
 
-<div class="container">
+<div class="apply-wrapper">
 
-    <h2 style="text-align:center;">TR1PL39 Application Form</h2>
+    <div class="apply-card">
 
-    <form id="applyForm">
+        <h1 class="apply-title">TR1PL39 Application</h1>
+        <p class="apply-sub">Fill the form carefully before submitting</p>
 
-        <input type="text" name="name" placeholder="Your Name" required>
+        <form id="applyForm">
 
-        <input type="text" name="age" placeholder="Age" required>
+            <div class="section">
+                <h3>Personal Info</h3>
 
-        <input type="text" name="hours" placeholder="In-game Hours" required>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="text" name="age" placeholder="Age" required>
+                <input type="text" name="hours" placeholder="In-game Hours" required>
+            </div>
 
-        <input type="text" name="previous-gangs" placeholder="Previous Gangs">
+            <div class="section">
+                <h3>Background</h3>
 
-        <textarea name="why" placeholder="Why do you want to join TR1PL39?" required></textarea>
+                <input type="text" name="gangs" placeholder="Previous Gangs (if any)">
+            </div>
 
-        <textarea name="experience" placeholder="Your experience in CIT / RP"></textarea>
+            <div class="section">
+                <h3>Motivation</h3>
 
-        <button type="submit">Submit Application</button>
+                <textarea name="why" placeholder="Why do you want to join TR1PL39?" required></textarea>
+                <textarea name="experience" placeholder="Your experience in CIT / RP"></textarea>
+            </div>
 
-    </form>
+            <button type="submit" class="submit-btn">Submit Application</button>
 
-    <a class="back" href="index.html">← Back</a>
+        </form>
+
+        <a class="back" href="index.html">Back</a>
+
+    </div>
 
 </div>
 
