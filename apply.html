@@ -3,36 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TR1PL39 Application</title>
+<title>Application - TR1PL39</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<div class="app-center">
 
-    <h2 style="text-align:center;">TR1PL39 Application Form</h2>
+    <div class="app-box">
 
-    <form id="applyForm">
+        <h1>Application Form</h1>
+        <p>Fill everything correctly. Wrong info = denial.</p>
 
-        <input type="text" name="name" placeholder="Your Name" required>
+        <form id="applyForm">
 
-        <input type="text" name="age" placeholder="Age" required>
+            <div class="row">
+                <input name="name" placeholder="Full Name" required>
+                <input name="age" placeholder="Age" required>
+            </div>
 
-        <input type="text" name="hours" placeholder="In-game Hours" required>
+            <input name="hours" placeholder="In-game Hours" required>
 
-        <input type="text" name="previous-gangs" placeholder="Previous Gangs">
+            <input name="gangs" placeholder="Previous Gangs (optional)">
 
-        <textarea name="why" placeholder="Why do you want to join TR1PL39?" required></textarea>
+            <textarea name="why" placeholder="Why do you want to join TR1PL39?" required></textarea>
 
-        <textarea name="experience" placeholder="Your experience in CIT / RP"></textarea>
+            <textarea name="experience" placeholder="Your RP / CIT Experience"></textarea>
 
-        <button type="submit">Submit Application</button>
+            <button type="submit">Submit Application</button>
 
-    </form>
+            <a href="index.html" class="back">Back to Home</a>
 
-    <a class="back" href="index.html">← Back</a>
+        </form>
+
+    </div>
 
 </div>
 
