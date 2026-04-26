@@ -5,102 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TR1PL39 Recruitment</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #0a0f1a, #05080f);
-    color: #cbd5e1;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-/* BOX STYLE */
-.box {
-    background: #0b1220;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease forwards;
-}
-
-.box:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h2 {
-    color: #3b82f6;
-    border-bottom: 1px solid #1e293b;
-    padding-bottom: 10px;
-}
-
-/* LIST */
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin: 15px 0;
-}
-
-/* BULLETS */
-.req li::marker {
-    color: #3b82f6;
-}
-
-.rules li::marker {
-    color: #ef4444;
-}
-
-/* BUTTON */
-.btn-container {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.btn {
-    background: linear-gradient(90deg, #3b82f6, #2563eb);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 15px #3b82f6;
-}
-
-/* MOBILE */
-@media(max-width: 800px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -109,7 +14,6 @@ li {
 
     <div class="grid">
 
-        <!-- REQUIREMENTS -->
         <div class="box">
             <h2>Requirements</h2>
             <ul class="req">
@@ -117,25 +21,23 @@ li {
                 <li>Must have 200+ hours before applying.</li>
                 <li>Must be groupless before applying.</li>
                 <li>Must be gangless for 2–3 days.</li>
-                <li>Must be an active player.</li>
+                <li>Must be active.</li>
             </ul>
         </div>
 
-        <!-- RULES -->
         <div class="box">
             <h2>Rules</h2>
             <ul class="rules">
-                <li>Must not be known as a troublemaker.</li>
-                <li>Wait 3–4 days before reapplying if denied.</li>
-                <li>Do NOT ask leaders about your application.</li>
-                <li>Must follow TR1PL39 rules.</li>
-                <li>Must follow CIT rules.</li>
+                <li>No troublemakers.</li>
+                <li>Wait 3–4 days if denied.</li>
+                <li>No spamming leaders.</li>
+                <li>Follow TR1PL39 rules.</li>
+                <li>Follow CIT rules.</li>
             </ul>
         </div>
 
     </div>
 
-    <!-- BUTTON -->
     <div class="btn-container">
         <a href="apply.html" class="btn">Submit Application</a>
     </div>
