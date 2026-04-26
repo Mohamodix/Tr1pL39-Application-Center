@@ -1,113 +1,32 @@
-body {
-    background-color: #0d1117;
-    color: #e6edf3;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-}
+document.getElementById('discordForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-.application-container {
-    width: 100%;
-    max-width: 850px;
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 4px;
-}
+    const webhookURL = "https://discord.com/api/webhooks/1498009737768337602/KLwxaE1uSRSjG3yYoPJm84U8BDidiQVO7145fuafteV4B4aQ2VyaLtFsvF6Mxe7ZFg_t";
+    
+    const embedData = {
+        username: "Tr1pL39 Bot",
+        embeds: [{
+            title: "New Recruitment Application",
+            color: 255, // Blue
+            fields: [
+                { name: "Nick", value: document.getElementById('idNick').value, inline: true },
+                { name: "Discord", value: document.getElementById('discord').value, inline: true },
+                { name: "Full Name", value: document.getElementById('fullName').value },
+                { name: "Serial", value: document.getElementById('serial').value },
+                { name: "Corruption Def", value: document.getElementById('corruption').value },
+                { name: "Backup Def", value: document.getElementById('backup').value }
+            ],
+            footer: { text: "CIT Group: Tr1pL39" },
+            timestamp: new Date()
+        }]
+    };
 
-/* Warning Header */
-.warning-header {
-    background: #1c1c1c;
-    border-bottom: 3px solid #ffcc00;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-
-.warning-icon {
-    font-size: 40px;
-    color: #ff3333;
-    margin-right: 20px;
-}
-
-.warning-text {
-    font-weight: bold;
-    font-size: 1.4rem;
-    color: #ffcc00;
-    text-transform: uppercase;
-}
-
-.warning-text span {
-    display: block;
-    font-size: 0.9rem;
-    color: #8b949e;
-}
-
-/* Form Sections */
-.form-section {
-    padding: 20px;
-    border-bottom: 1px solid #30363d;
-}
-
-.section-title {
-    background: #0d47a1;
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    border-radius: 2px;
-}
-
-.input-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.input-box {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.input-box.full-width {
-    grid-column: span 2;
-}
-
-label {
-    font-size: 0.85rem;
-    color: #8b949e;
-    margin-bottom: 5px;
-}
-
-input, textarea, select {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    padding: 10px;
-    color: white;
-    border-radius: 3px;
-}
-
-.char-count {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 0.75rem;
-    color: #484f58;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 15px;
-    background: #0d47a1;
-    color: white;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.submit-btn:hover { background: #1565c0; }
+    fetch(webhookURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(embedData)
+    }).then(() => {
+        alert("Application Sent!");
+        location.reload();
+    });
+});
