@@ -5,10 +5,9 @@ document.getElementById("applyForm").addEventListener("submit", async (e) => {
 
     const f = e.target;
 
-    // helper to avoid Discord breaking (1024 char limit)
     const clean = (text) => {
         if (!text) return "None";
-        return text.toString().slice(0, 1024);
+        return String(text).slice(0, 1024);
     };
 
     const payload = {
@@ -17,12 +16,12 @@ document.getElementById("applyForm").addEventListener("submit", async (e) => {
             title: "Application Details",
             color: 0x5e72e4,
             fields: [
-                { name: "👤 Name", value: clean(f.name?.value) },
-                { name: "🎂 Age", value: clean(f.age?.value) },
-                { name: "⏱ Hours", value: clean(f.hours?.value) },
-                { name: "🏴 Gangs", value: clean(f.gangs?.value) },
-                { name: "📝 Why Join", value: clean(f.why?.value) },
-                { name: "💼 Experience", value: clean(f.experience?.value) }
+                { name: "👤 Name", value: clean(f.name.value) },
+                { name: "🎂 Age", value: clean(f.age.value) },
+                { name: "⏱ Hours", value: clean(f.hours.value) },
+                { name: "🏴 Previous Gangs", value: clean(f.gangs.value) },
+                { name: "📝 Why Join", value: clean(f.why.value) },
+                { name: "💼 Experience", value: clean(f.experience.value) }
             ],
             footer: {
                 text: "TR1PL39 Recruitment System"
