@@ -28,7 +28,6 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
 }
 
 .nav a:hover {
@@ -55,34 +54,18 @@ body {
     padding: 25px;
     border-radius: 14px;
     box-shadow: 0 0 25px rgba(0,0,0,0.5);
-    transition: 0.3s;
 }
 
-.box:hover {
-    transform: translateY(-5px);
-}
-
-/* TITLE */
 h2 {
     color: var(--primary);
 }
 
-/* LISTS */
 ul {
     padding-left: 20px;
 }
 
 li {
     margin: 12px 0;
-    line-height: 1.5;
-}
-
-.req li::marker {
-    color: var(--primary);
-}
-
-.rules li::marker {
-    color: #ff4d4d;
 }
 
 /* BUTTON */
@@ -98,16 +81,10 @@ li {
     border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
     display: inline-block;
 }
 
-.btn:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 20px var(--primary);
-}
-
-/* FORM */
+/* FORM GLOBAL */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -134,18 +111,61 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    transform: scale(1.05);
+/* APPLY PAGE */
+.apply-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.apply-card {
+    width: 450px;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.apply-title {
+    text-align: center;
+    color: var(--primary);
+}
+
+.apply-sub {
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
 }
 
 .back {
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
     color: #94a3b8;
     text-decoration: none;
 }
 
+/* MOBILE */
 @media(max-width: 800px){
     .grid {
         grid-template-columns: 1fr;
