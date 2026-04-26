@@ -9,199 +9,138 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0d0d0d;
-    color: white;
+    background: linear-gradient(180deg, #0a0f1a, #05080f);
+    color: #cbd5e1;
 }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 40px;
-    border-bottom: 2px solid red;
-    background: linear-gradient(black, #111);
-}
-
-header img {
-    width: 140px;
-}
-
-h1 {
-    letter-spacing: 3px;
-}
-
-/* NAV */
-nav {
-    text-align: center;
-    background: #111;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: red;
-}
-
-/* SECTIONS */
-section {
-    max-width: 900px;
+/* CONTAINER */
+.container {
+    max-width: 1200px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* BOX STYLE */
 .box {
-    background: #111;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-left: 4px solid red;
+    background: #0b1220;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
 }
 
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.box:nth-child(2) {
+    animation-delay: 0.3s;
 }
 
-input, textarea, select {
-    padding: 12px;
-    background: #0d0d0d;
-    border: 1px solid #333;
-    color: white;
-    border-radius: 5px;
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-input:focus, textarea:focus, select:focus {
-    border-color: red;
-    outline: none;
-}
-
-button {
-    padding: 15px;
-    background: red;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background: darkred;
-}
-
-/* TITLES */
 h2 {
-    color: red;
+    color: #3b82f6;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 10px;
 }
 
-h3 {
-    border-left: 4px solid red;
-    padding-left: 10px;
-    margin-top: 20px;
+/* LIST */
+ul {
+    padding-left: 20px;
 }
 
-/* FOOTER */
-footer {
+li {
+    margin: 15px 0;
+}
+
+/* BULLETS */
+.req li::marker {
+    color: #3b82f6;
+}
+
+.rules li::marker {
+    color: #ef4444;
+}
+
+/* BUTTON */
+.btn-container {
     text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #777;
+    margin-top: 40px;
+}
+
+.btn {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #3b82f6;
+}
+
+/* MOBILE */
+@media(max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <img src="https://imgur.com/6aTriqF.png">
-    <h1>TR1PL39</h1>
-    <p>Elite Gang Recruitment</p>
-</header>
+<div class="container">
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#apply">Apply</a>
-</nav>
+    <div class="grid">
 
-<section id="about">
-    <div class="box">
-        <h2>About TR1PL39</h2>
-        <p>We recruit only loyal, active, and disciplined players. Follow rules or get removed.</p>
-    </div>
-</section>
+        <!-- REQUIREMENTS -->
+        <div class="box">
+            <h2>Requirements</h2>
+            <ul class="req">
+                <li>Decent English skills.</li>
+                <li>Must have 200+ hours before applying.</li>
+                <li>Must be groupless before applying.</li>
+                <li>Must be gangless for 2–3 days.</li>
+                <li>Must be an active player.</li>
+            </ul>
+        </div>
 
-<section id="apply">
-    <div class="box">
-        <h2>Application Form</h2>
-
-        <!-- IMPORTANT: REPLACE LINK -->
-        <form action="https://formspree.io/f/YOUR_ID" method="POST">
-
-            <h3>1. Introduction</h3>
-            <input type="text" name="name" placeholder="What is your name?" required>
-            <input type="number" name="age" placeholder="How old are you?" required>
-
-            <select name="gender" required>
-                <option value="">Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-            </select>
-
-            <input type="text" name="hobbies" placeholder="Favorite hobbies" required>
-            <input type="text" name="former_groups" placeholder="Former groups" required>
-
-            <h3>2. Informations</h3>
-            <input type="text" name="account" placeholder="Account name" required>
-            <input type="text" name="serial" placeholder="Serial" required>
-            <input type="text" name="playtime" placeholder="Playtime (hours/day)" required>
-
-            <textarea name="reason" placeholder="Why do you wanna join?" required></textarea>
-
-            <h3>3. Screenshots</h3>
-            <input type="url" name="stats" placeholder="/stats screenshot link" required>
-            <input type="url" name="history" placeholder="/myhistory screenshot link" required>
-            <input type="url" name="punishlog" placeholder="/punishlog screenshot link" required>
-
-            <h3>4. Agreements</h3>
-
-            <select name="rules" required>
-                <option value="">Agree to follow CIT rules?</option>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
-
-            <select name="leaders" required>
-                <option value="">Will you avoid annoying leaders?</option>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
-
-            <select name="leave" required>
-                <option value="">Will you leave once accepted?</option>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
-
-            <select name="punish" required>
-                <option value="">Will you avoid punishments?</option>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
-
-            <button type="submit">Submit Application</button>
-
-        </form>
+        <!-- RULES -->
+        <div class="box">
+            <h2>Rules</h2>
+            <ul class="rules">
+                <li>Must not be known as a troublemaker.</li>
+                <li>Wait 3–4 days before reapplying if denied.</li>
+                <li>Do NOT ask leaders about your application.</li>
+                <li>Must follow TR1PL39 rules.</li>
+                <li>Must follow CIT rules.</li>
+            </ul>
+        </div>
 
     </div>
-</section>
 
-<footer>
-    <p>© 2026 TR1PL39</p>
-</footer>
+    <!-- BUTTON -->
+    <div class="btn-container">
+        <a href="apply.html" class="btn">Submit Application</a>
+    </div>
+
+</div>
 
 </body>
 </html>
