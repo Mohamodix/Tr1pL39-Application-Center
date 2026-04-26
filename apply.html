@@ -6,29 +6,31 @@
 <title>Application - TR1PL39</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app-center">
+<div class="app-page">
 
-    <div class="app-box">
+    <div class="app-panel">
 
-        <h1>Application Form</h1>
-        <p>Fill everything correctly. Wrong info = denial.</p>
+        <div class="app-header">
+            <h1>Application Form</h1>
+            <p>Fill everything correctly. Wrong info = denial.</p>
+        </div>
 
         <form id="applyForm">
 
-            <div class="row">
+            <div class="grid-2">
                 <input name="name" placeholder="Full Name" required>
                 <input name="age" placeholder="Age" required>
             </div>
 
-            <input name="hours" placeholder="In-game Hours" required>
-
-            <input name="gangs" placeholder="Previous Gangs (optional)">
+            <div class="grid-2">
+                <input name="hours" placeholder="In-game Hours" required>
+                <input name="gangs" placeholder="Previous Gangs (optional)">
+            </div>
 
             <textarea name="why" placeholder="Why do you want to join TR1PL39?" required></textarea>
 
@@ -36,7 +38,7 @@
 
             <button type="submit">Submit Application</button>
 
-            <a href="index.html" class="back">Back to Home</a>
+            <a href="index.html" class="back">← Back</a>
 
         </form>
 
