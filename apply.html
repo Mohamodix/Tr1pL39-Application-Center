@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Application - TR1PL39</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tr1pL39 Application Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://via.placeholder.com/100" alt="Tr1pL39 Logo">
+            </div>
+            <h1>TR1PL39 APPLICATION FORM</h1>
+            <p>Tr1pL39 Recruitment Department</p>
+        </header>
 
-<div class="app-page">
-
-    <div class="app-panel">
-
-        <div class="app-header">
-            <h1>Application Form</h1>
-            <p>Fill everything correctly. Wrong info = denial.</p>
-        </div>
-
-        <form id="applyForm">
-
-            <div class="grid-2">
-                <input name="name" placeholder="Full Name" required>
-                <input name="age" placeholder="Age" required>
+        <form>
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <div class="grid-container">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your Name">
+                    </div>
+                    <div class="input-group">
+                        <label>ID Nick</label>
+                        <input type="text" placeholder="In-game Nickname">
+                    </div>
+                    <div class="input-group">
+                        <label>Discord Username</label>
+                        <input type="text" placeholder="username (without #0000)">
+                    </div>
+                    <div class="input-group">
+                        <label>Country Code</label>
+                        <input type="text" placeholder="e.g., US, CA, UK">
+                    </div>
+                </div>
             </div>
 
-            <div class="grid-2">
-                <input name="hours" placeholder="In-game Hours" required>
-                <input name="gangs" placeholder="Previous Gangs (optional)">
+            <div class="form-section">
+                <h2>Game Information</h2>
+                <div class="grid-container">
+                    <div class="input-group">
+                        <label>Stats Link</label>
+                        <input type="url" placeholder="Link to your stats">
+                    </div>
+                    <div class="input-group">
+                        <label>Punishing Link</label>
+                        <input type="url" placeholder="Link to your history">
+                    </div>
+                </div>
+                <div class="input-group full-width">
+                    <label>Interview Ready?</label>
+                    <select>
+                        <option value="" disabled selected>Select...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
             </div>
 
-            <textarea name="why" placeholder="Why do you want to join TR1PL39?" required></textarea>
+            <div class="form-section">
+                <h2>Experience & Scenarios</h2>
+                <div class="input-group full-width">
+                    <label>Former Groups (if any)</label>
+                    <textarea rows="3" placeholder="List your previous clans/groups"></textarea>
+                </div>
+                <div class="input-group full-width">
+                    <label>Define Corruption</label>
+                    <textarea rows="3" placeholder="Your definition here..."></textarea>
+                </div>
+                <div class="input-group full-width">
+                    <label>What is a Backup?</label>
+                    <textarea rows="3" placeholder="Explain the procedure..."></textarea>
+                </div>
+            </div>
 
-            <textarea name="experience" placeholder="Your RP / CIT Experience"></textarea>
-
-            <button type="submit">Submit Application</button>
-
-            <a href="index.html" class="back">← Back</a>
-
+            <button type="submit" class="submit-btn">Submit Application</button>
         </form>
-
     </div>
-
-</div>
-
-<script src="script.js"></script>
-
 </body>
 </html>
